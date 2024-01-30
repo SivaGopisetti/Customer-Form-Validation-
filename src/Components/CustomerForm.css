@@ -1,0 +1,62 @@
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: rgb(145, 227, 238);
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  checkbox {
+    margin-right: 5px;
+  }
+  
+  button {
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  div {
+    max-width: 400px;
+  }
+  
+  h2 {
+    margin-bottom: 10px;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+  .error-msg{
+    color: red;
+    font-size: small;
+  }
