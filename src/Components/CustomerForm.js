@@ -14,7 +14,7 @@ const CustomForm = () => {
   const [formErrors, setFormErrors] = useState({});
 
   useEffect(() => {
-    // Load data from local storage when the component mounts.
+    // Load data from local storage when the component mounts. added
     const savedData = localStorage.getItem('customerData');
     if (savedData) {
       try {
@@ -24,7 +24,7 @@ const CustomForm = () => {
         setFormData(initialFormData);
       }
     }
-  }, []);
+  }, [initialFormData]);
 
   const handleChange = (e) => {
     //  Updates formData state with new input value and corresponding key
