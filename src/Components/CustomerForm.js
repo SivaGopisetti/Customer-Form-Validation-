@@ -14,7 +14,7 @@ const CustomForm = () => {
   const [formErrors, setFormErrors] = useState({});
 
   useEffect(() => {
-    // Load data from local storage when the component mounts
+    // Load data from local storage when the component mounts.
     const savedData = localStorage.getItem('customerData');
     if (savedData) {
       try {
