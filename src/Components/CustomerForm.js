@@ -27,6 +27,7 @@ const CustomForm = () => {
   }, []);
 
   const handleChange = (e) => {
+    //  Updates formData state with new input value and corresponding key
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
@@ -39,7 +40,7 @@ const CustomForm = () => {
   };
 
   const handleSave = () => {
-    // saving the form data
+    //  Save customer data to local storage before submitting the form
     const requiredFields = ['name', 'city', 'employeeId', 'gender'];
     const errors = {};
     //form validations
