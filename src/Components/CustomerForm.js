@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useMemo } from 'react';
 import './CustomerForm.css';
 
 const CustomForm = () => {
@@ -28,7 +28,7 @@ const CustomForm = () => {
         }
       }
     }, []);
-    
+
   const handleChange = (e) => {
     //  Updates formData state with new input value and corresponding key
     const { name, value } = e.target;
