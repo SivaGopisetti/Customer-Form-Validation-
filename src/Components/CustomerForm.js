@@ -2,30 +2,33 @@ import React, { useState, useEffect } from 'react';
 import './CustomerForm.css';
 
 const CustomForm = () => {
-  const initialFormData = {
-    name: '',
-    employeeId: '',
-    city: '',
-    gender: '',
-  };
-
-  const [formData, setFormData] = useState({});
-  const [isEditing, setIsEditing] = useState(false);
-  const [formErrors, setFormErrors] = useState({});
-
-  useEffect(() => {
-    // Load data from local storage when the component mounts. added
-    const savedData = localStorage.getItem('customerData');
-    if (savedData) {
-      try {
-        setFormData(JSON.parse(savedData));
-      } catch (error) {
-        console.error('Error parsing data from localStorage:', error);
-        setFormData(initialFormData);
+    const [formData, setFormData] = useState({});
+    const [isEditing, setIsEditing] = useState(false);
+    const [formErrors, setFormErrors] = useState({});
+    
+    const initialFormData = useMemo(
+      () => ({
+        name: '',
+        employeeId: '',
+        city: '',
+        gender: '',
+      }),
+      []
+    );
+    
+    useEffect(() => {
+      // Load data from local storage when the component mounts.
+      const savedData = localStorage.getItem('customerData');
+      if (savedData) {
+        try {
+          setFormData(JSON.parse(savedData));
+        } catch (error) {
+          console.error('Error parsing data from localStorage:', error);
+          setFormData(initialFormData);
+        }
       }
-    }
-  }, [initialFormData]);
-
+    }, []);
+    
   const handleChange = (e) => {
     //  Updates formData state with new input value and corresponding key
     const { name, value } = e.target;
