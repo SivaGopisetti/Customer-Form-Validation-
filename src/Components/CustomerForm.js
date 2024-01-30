@@ -9,7 +9,7 @@ const CustomForm = () => {
     gender: '',
   };
 
-  const [formData, setFormData] = useState(initialFormData);
+  const [formData, setFormData] = useState({});
   const [isEditing, setIsEditing] = useState(false);
   const [formErrors, setFormErrors] = useState({});
 
