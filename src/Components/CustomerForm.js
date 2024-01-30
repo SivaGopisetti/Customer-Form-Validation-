@@ -27,7 +27,7 @@ const CustomForm = () => {
           setFormData(initialFormData);
         }
       }
-    }, []);
+    }, [initialFormData]);
 
   const handleChange = (e) => {
     //  Updates formData state with new input value and corresponding key
